@@ -1,0 +1,282 @@
+/* ===== 基础重置 ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Microsoft YaHei", sans-serif;
+  line-height: 1.7;
+  color: #333;
+  background-color: #f7f7f5;
+}
+
+/* ===== 顶部导航 ===== */
+header {
+  background-color: #2f5d50;
+  color: #fff;
+  padding: 20px 16px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+
+nav a {
+  color: #e8f0ec;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+/* ===== 主体内容 ===== */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+}
+
+main h2 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  color: #2f5d50;
+}
+
+section {
+  margin-bottom: 32px;
+}
+
+section h2 {
+  margin-bottom: 16px;
+}
+
+/* ===== 时间线 ===== */
+section ul {
+  list-style: none;
+  border-left: 3px solid #cfe0d8;
+  padding-left: 20px;
+}
+
+section ul li {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+section ul li::before {
+  content: "";
+  position: absolute;
+  left: -28px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  background-color: #2f5d50;
+  border-radius: 50%;
+}
+
+section ul time {
+  display: block;
+  font-size: 0.85rem;
+  color: #7a8c84;
+  margin-bottom: 2px;
+}
+
+section ul h3 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+section ul p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ===== 回忆卡片 ===== */
+article {
+  background-color: #fff;
+  border: 1px solid #e3e8e5;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+article h3 {
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+article h3 a {
+  color: #2f5d50;
+  text-decoration: none;
+}
+
+article h3 a:hover {
+  text-decoration: underline;
+}
+
+article p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+article p:first-of-type {
+  font-size: 0.85rem;
+  color: #7a8c84;
+}
+
+/* ===== 详情页正文 ===== */
+main > article > p {
+  margin-bottom: 12px;
+  color: #444;
+}
+
+main > article > p:last-child {
+  margin-top: 24px;
+}
+
+main > article > p:last-child a {
+  color: #2f5d50;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+main > article > p:last-child a:hover {
+  text-decoration: underline;
+}
+
+/* ===== 视频列表 ===== */
+main > ul {
+  list-style: none;
+}
+
+main > ul li {
+  background-color: #fff;
+  border: 1px solid #e3e8e5;
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+}
+
+main > ul h3 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+main > ul a {
+  color: #2f5d50;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+main > ul a:hover {
+  text-decoration: underline;
+}
+
+/* ===== 关于页 ===== */
+main > h2 + p,
+main > ul {
+  margin-bottom: 20px;
+}
+
+main ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ===== 页脚 ===== */
+footer {
+  text-align: center;
+  padding: 24px 16px;
+  font-size: 0.85rem;
+  color: #8a9a92;
+  border-top: 1px solid #e3e8e5;
+  background-color: #fff;
+}
+
+/* ===== 手机适配 ===== */
+@media (max-width: 600px) {
+  header {
+    padding: 16px 12px;
+  }
+
+  header h1 {
+    font-size: 1.25rem;
+  }
+
+  nav {
+    gap: 6px 14px;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding: 24px 12px 36px;
+  }
+
+  main h2 {
+    font-size: 1.25rem;
+  }
+
+  article {
+    padding: 16px;
+  }
+
+  section ul {
+    padding-left: 16px;
+  }
+}
+/* ===== 搜索框 ===== */
+.search-box {
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #cfd8d3;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+}
+
+.search-box input:focus {
+  border-color: #2f5d50;
+  box-shadow: 0 0 0 2px rgba(47, 93, 80, 0.15);
+}
+
+/* 导航当前页高亮 */
+nav a.active {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* 搜索无结果提示 */
+.no-result {
+  padding: 16px;
+  color: #7a8c84;
+  font-size: 0.95rem;
+}
